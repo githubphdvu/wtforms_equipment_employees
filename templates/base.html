@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{url_for('static',filename='employee_icon.png')}}">
+    <title>{% block title %}Employee app{% endblock %}</title>
+</head> 
+<body>
+<!--https://getbootstrap.com/docs/5.3/components/navbar/
+navbar navbar-expand-{sm,md,lg,xl,xxl}
+navbar-{light,dark}
+bg-{primary,secondary,success,danger,warning,info,light,dark,whitetransparent}
+container,container-fluid,container-{sm,md,lg,xl,xxl}
+row,row-
+col,col-,col-{sm,md,lg,xl,xxl}-0 to 12
+navbar-{brand,toggler,nav,text,collapse}
+data-bs-{toggle,target,dismiss,slide,ride}
+aria-{describedby,label,labelledby,hidden,live,expanded,controls,haspopup,pressed,selected}
+collapse,collapse navbar-collapse
+nav-{item,link,pills,tabs,dropdown,fill,justified}
+m-,mt-{0,1,2,3,4,5,auto},mb-,ms-,me-,mx-,my-
+p-,pt-.....same......
+display-{1 to 7 ???} 
+d-{none,inline,inline-block,block,grid,inline-grid,table,table-cell,table-row,flex,inline-flex},d-{breakpoint}-{value}
+text-{left,center,right,justify,nowrap,lowercase,uppercase,capitalize,white,primary,secondary,success,danger,warning,info,light,dark,muted,body,black-50,white-50}
+card,card-{card,card-header,card-body,card-footer,card-title,card-subtitle,card-text,card-img-top,card-img-bottom,card-img-overlay,card-group,card-deck,card-columns}
+<h1> to <h6>,lead,mark,del,s,ins,u,small,strong,em
+badge,rounded-pill,badge-{primary,secondary,success,danger,warning,info,light,dark,pill,dot,sm,...lg}
+bg-{color classes:primary,primary-emphasis,secondary,secondary-emphasis,success,success-emphasis,danger,danger-emphasis,warning,warning-emphasis,info,info-emphasis,light,light-emphasis,dark,dark-emphasis,body,body-emphasis,body-secondary,body-tertiary,black,white,black-50,white-50}
+form-group,form-control,form-control-{check,check-input,check-label,switch,select,range,floating,text,inline,control-{sm,lg..}}
+list-group,list-group-{numbered,item,action,flush),active, disabled,list-group-item-{primary...}...
+-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

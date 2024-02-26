@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block title%}Employees{%endblock%}
+
+{%block content%}
+<h1>Employees</h1>
+<table class="table table-striped">
+    <thead>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Phone</th>
+    </thead>
+    <tbody>
+        {% for emp in emps %}
+        <tr>
+        <td>{{emp.name}} 
+        <a class="btn btn-info" href="/employees/{{emp.id}}/edit">Edit</a></td>
+        <td>{{emp.dept.dept_name}}</td>
+        {% if emp.dept.phone %}
+        <td>{{emp.dept.phone}}</td>
+        {% else %}
+        <td class="text-danger">NO PHONE</td>
+        {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>  
+<a href="/employees/new" class="btn btn-primary">Add employee</a>
+<a href="/" class="btn btn-warning">Cancel</a>
+{%endblock%}
